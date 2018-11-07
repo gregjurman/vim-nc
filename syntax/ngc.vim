@@ -64,7 +64,7 @@ highlight link ngcOperator Operator
 highlight link ngcOperatorPunc Operator
 highlight link ngcIdentifier Identifier
 highlight link ngcLabel Label
-highlight link ngcLineNumbers Label
+highlight link ngcLineNumbers LineNr
 highlight link ngcTodo Todo
 highlight link ngcComment Comment
 highlight link ngcMessage SpecialComment
