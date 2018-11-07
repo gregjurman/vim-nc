@@ -21,7 +21,7 @@ syntax match ngcProgramID /\(O[0-9][0-9]*\|:[0-9][0-9]*\)/
 syntax match ngcIdentifier /#<*[A-Z_0-9]*>*/
 syntax match ngcLineNumbers /\(n[0-9][0-9]*\)/
 syntax keyword ngcTodo TODO FIXME XXX contained
-syntax match ngcComment /(.*)/ contains=ngcTodo
+syntax match ngcComment /([^)]*)/ contains=ngcTodo
 syntax match ngcMessage /(\s*MSG\s*,.*)/ contains=ngcIdentifier
 syntax match ngcLogOpen /(\s*LOGOPEN\s*,.*)/
 syntax match ngcLogClose /(\s*LOGCLOSE\s*)/
@@ -32,14 +32,22 @@ syntax match ngcGCodes /\s*\(g[0-9][0-9]*\)/
 syntax match ngcGCodesAlt /\s*\(g[0-9][0-9]*\.[0-9]\)/
 syntax match ngcMCodes /\s*\(m[0-9][0-9]*\)/
 syntax match ngcAxes /\s*\([abc][-#]*[0-9.][.]*[0-9]*\)/ contains=ngcIdentifier
-syntax match ngcXAxis /\s*\([xui][-#]*[0-9.][.]*[0-9]*\)/ contains=ngcIdentifier
-syntax match ngcYAxis /\s*\([yvj][-#]*[0-9.][.]*[0-9]*\)/ contains=ngcIdentifier
-syntax match ngcZAxis /\s*\([zwk][-#]*[0-9.][.]*[0-9]*\)/ contains=ngcIdentifier
+syntax match ngcXAxisScaled /\s*\([xui] *[-+#]\?[1-9][0-9]*\)/ contains=ngcIdentifier
+syntax match ngcYAxisScaled /\s*\([yvj] *[-+#]\?[1-9][0-9]*\)/ contains=ngcIdentifier
+syntax match ngcZAxisScaled /\s*\([zwk] *[-+#]\?[1-9][0-9]*\)/ contains=ngcIdentifier
+syntax match ngcFeedScaled /\s*\(f *#\?[1-9][0-9]*\)/ contains=ngcIdentifier
+syntax match ngcXAxis /\s*\([xui] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
+syntax match ngcYAxis /\s*\([yvj] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
+syntax match ngcZAxis /\s*\([zwk] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
+syntax match ngcFeed /\s*\([f] *[#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
 syntax match ngcSpecials /\s*\(,[c][#-]*[0-9.][.]*[0-9]*\|[relpqds][-#]*[0-9.][.]*[0-9]*\)\s*/ contains=ngcIdentifier
-syntax match ngcFeed /\s*\([f][0-9.][.]*[0-9]*\)/
 syntax match ngcTool /[ht][0-9][0-9]*/
 syntax match ngcBlockSkip /^\/.*/
 
+hi link ngcXAxisScaled Error
+hi link ngcYAxisScaled Error
+hi link ngcZAxisScaled Error
+hi link ngcFeedScaled Error
 highlight ngcFileBlock ctermfg=White ctermbg=Red cterm=bold
 highlight ngcProgramID ctermfg=White cterm=bold
 highlight ngcXAxis ctermfg=34
