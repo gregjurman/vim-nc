@@ -41,7 +41,7 @@ syntax match ngcYAxis /\s*\([yvj] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifi
 syntax match ngcZAxis /\s*\([zwk] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
 syntax match ngcFeed /\s*\([f] *[#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
 syntax match ngcSpecials /\s*\(,[c][#-]*[0-9.][.]*[0-9]*\|[relpqds][-#]*[0-9.][.]*[0-9]*\)\s*/ contains=ngcIdentifier
-syntax match ngcTool /[ht][0-9][0-9]*/
+syntax match ngcTool /[hdt][0-9][0-9]*/
 syntax match ngcBlockSkip /^\/.*/
 
 hi link ngcXAxisScaled Error
@@ -78,6 +78,6 @@ highlight link ngcGCodesAlt Keyword
 highlight link ngcMCodes Keyword
 highlight link ngcAxes SpecialChar
 highlight ngcFeed ctermfg=89
-highlight ngcTool ctermfg=94
+highlight link ngcTool EnumeratorName
 
 let b:current_syntax = "ngc"
