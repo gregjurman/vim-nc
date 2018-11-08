@@ -40,7 +40,7 @@ syntax match ngcXAxis /\s*\([xui] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifi
 syntax match ngcYAxis /\s*\([yvj] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
 syntax match ngcZAxis /\s*\([zwk] *[-+#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
 syntax match ngcFeed /\s*\([f] *[#]\?[0-9]*\.[0-9]*\)/ contains=ngcIdentifier
-syntax match ngcSpecials /\s*\(,[c][#-]*[0-9.][.]*[0-9]*\|[relpqds][-#]*[0-9.][.]*[0-9]*\)\s*/ contains=ngcIdentifier
+syntax match ngcSpecials /\s*\(,[c][#-]*[0-9.][.]*[0-9]*\|[relpqs][-#]*[0-9.][.]*[0-9]*\)\s*/ contains=ngcIdentifier
 syntax match ngcTool /[hdt][0-9][0-9]*/
 syntax match ngcBlockSkip /^\/.*/
 
