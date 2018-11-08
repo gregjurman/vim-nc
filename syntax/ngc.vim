@@ -12,7 +12,7 @@ syn case ignore
 
 syntax match ngcConstant /\(\-\=[.0-9]*\)/
 syntax keyword ngcConditional if else endif
-syntax keyword ngcRepeat do while endwhile break continue end goto
+syntax keyword ngcRepeat do do1 do2 do3 while endwhile break continue end end1 end2 end3 goto
 syntax keyword ngcFunction sub endsub call return
 syntax keyword ngcOperator EQ NE GT GE LT LE ABS ACOS ASIN ATAN COS EXP FIX FUP LN ROUND SIN SQRT TAN MOD AND OR
 syntax match ngcOperatorPunc "[%\-+*/\[\]]"
