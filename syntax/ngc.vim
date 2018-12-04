@@ -48,14 +48,14 @@ hi link ngcXAxisScaled Error
 hi link ngcYAxisScaled Error
 hi link ngcZAxisScaled Error
 hi link ngcFeedScaled Error
-highlight ngcFileBlock ctermfg=White ctermbg=Red cterm=bold
-highlight ngcProgramID ctermfg=White cterm=bold
-highlight ngcXAxis ctermfg=34
-highlight ngcYAxis ctermfg=20
-highlight ngcZAxis ctermfg=124
-highlight ngcAxes ctermfg=102
-highlight ngcSpecials ctermfg=101
-highlight ngcBlockSkip ctermfg=White cterm=bold
+highlight ngcFileBlock ctermfg=white ctermbg=red cterm=bold
+highlight ngcProgramID ctermfg=white cterm=bold
+highlight ngcXAxis ctermfg=darkgreen
+highlight ngcYAxis ctermfg=darkblue
+highlight ngcZAxis ctermfg=red
+highlight ngcAxes ctermfg=lightgreen
+highlight ngcSpecials ctermfg=brown
+highlight ngcBlockSkip ctermfg=white cterm=bold
 highlight link ngcConstant Constant
 highlight link ngcConditional Conditional
 highlight link ngcRepeat Repeat
@@ -77,7 +77,7 @@ highlight link ngcGCodes Keyword
 highlight link ngcGCodesAlt Keyword
 highlight link ngcMCodes Keyword
 highlight link ngcAxes SpecialChar
-highlight ngcFeed ctermfg=89
+highlight ngcFeed ctermfg=magenta
 highlight link ngcTool EnumeratorName
 
 let b:current_syntax = "ngc"
